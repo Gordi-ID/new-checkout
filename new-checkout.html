@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checkout</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/filamentgroup/fixed-sticky/master/fixedsticky.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<style type="text/css">
+		/* loaded fixed-sticky polyfill
+		https://github.com/filamentgroup/fixed-sticky */
+		.fixedsticky {
+			top: 15px;
+		}
+		.prepay-price{
+          	display: none;
+      	}
+      	.preoneChecked{
+      		display: none;
+      	}
+		@media(max-width: 550px){
+			.fixedsticky {
+				top: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="co-wrapper">
+		<div class="container">
+			<div class="up-section">
+				<img src="images/gordi-logo-01.png">
+				<h5>Checkout</h5>
+			</div>
+		</div>
+		<div class="detailMBL fixedsticky" style="display: none;">
+			<div id="forShow" class="row upDetail">
+				<div class="one-half column">
+					<p>Order Anda</p>
+				</div>
+				<div class="one-half column">
+					<label class="normal-price">Rp 79.000</label>
+					<label class="prepay-price">Rp 402.900</label>
+				</div>
+			</div>
+			<div class="column forDetail isShow">
+	          	<h5>Order Anda</h5>
+	          	<div class="row">
+		            <div class="one-half column y-order">
+		              	<span>Filter Package - 100g (2 x 50g) - Whole Beans</span>
+		            </div>
+		            <div class="one-half column y-order">
+		              	<span class="normal-price" style="float: right;">1 x Rp 79.000</span>
+			            <span class="prepay-price" style="float: right;">6 x Rp 79.000</span>
+		            </div>
+	          	</div>
+	          	<div class="row forReferral" style="display: none;">
+		            <div class="nine columns">
+		              	<input type="text" name="referral">
+		            </div>
+		            <div class="three columns">
+		              	<button>Apply</button>
+		            </div>
+	          	</div>
+	          	<div class="divider"></div>
+	          	<div class="row">
+		            <div class="one-half column y-order">
+		              	<span>Total</span>
+		            </div>
+		            <div class="one-half column y-order">
+		              	<span class="normal-price" style="float: right;">Rp 79.000</span>
+			            <span class="prepay-price" style="float: right;">Rp 474.000</span>
+		            </div>
+	          	</div>
+		        <div class="row">
+		            <div class="one-half column y-order">
+		              	<span>Ongkos kirim</span>
+		            </div>
+		            <div class="one-half column y-order">
+		              	<span style="float: right;">Free</span>
+		            </div>
+		        </div>
+		        <div class="row">
+		            <div class="one-half column y-order">
+		              	<span class="normal-price">Diskon</span>
+			            <span class="prepay-price">Diskon = 15%</span>
+		            </div>
+		            <div class="one-half column y-order">
+		              	<span class="normal-price" style="float: right;">-</span>
+			            <span class="prepay-price" style="float: right;">Rp 71.100</span>
+		            </div>
+		        </div>
+	          	<div class="divider"></div>
+		        <div class="row">
+		            <div class="one-half column y-order">
+		              	<span style="font-weight: bold;">Total</span>
+		            </div>
+		            <div class="one-half column y-order">
+		              	<span class="normal-price" style="float: right; font-size: 24px;font-weight: bold;">Rp 79.000</span>
+			            <span class="prepay-price" style="float: right; font-size: 24px;font-weight: bold;">Rp 402.900</span>
+		            </div>
+		        </div>
+	        </div>
+		</div>
+		<div class="container">
+			<div class="left-side">
+				<div class="forAccount">
+					<div class="row">
+						<div class="one-half column">
+							<h6>Daftar akun baru</h6>
+						</div>
+						<div class="one-half column">
+							<p>Sudah punya akun? <a href="#">Log in</a></p>
+						</div>
+					</div>
+					<div class="row-input">
+	          			<label for="eml"><span>Email</span></label>
+	          			<input type="text" name="email" id="eml" placeholder="veronica@gmail.com" required autocomplete="off" />
+					</div>
+					<div class="row-input">
+						<label for="pass1"><span>Password</span></label>
+						<input type="text" name="password1" id="pass1" placeholder="&#9679&#9679&#9679&#9679&#9679" required autocomplete="off" />
+					</div>
+					<div class="row-input">
+						<label for="pass2"><span>Ulangi password</span></label>
+						<input type="text" name="password2" id="pass2" placeholder="&#9679&#9679&#9679&#9679&#9679" required autocomplete="off" />
+					</div>
+				</div>
+				<div class="forInfor">
+					<h6>Informasi Pribadi</h6>
+					<div class="row">
+						<div class="one-half column row-input">
+							<label for="fname">Nama depan</label>
+							<input type="text" name="fname" id="fname" placeholder="Veronica" required autocomplete="off" />
+						</div>
+						<div class="one-half column row-input">
+							<label for="lname">Nama belakang</label>
+							<input type="text" name="lname" id="lname" placeholder="Veronica" required autocomplete="off" />
+						</div>
+					</div>
+					<div class="row-input">
+						<label for="adr">Alamat lengkap</label>
+						<input type="text" name="addres" id="adr" placeholder="Jl. Jeruk purut dalam no 25" required autocomplete="off" />
+					</div>
+					<div class="row">
+			          <div class="one-half column row-input">
+			            <label for="ctr">Provinsi</label>
+			            <select id="ctr" required>
+			                <option value="">Pilih provinsi</option>
+			                <option value="">Indonesia</option>
+			                <option value="">Indo</option>
+			                <option value="">Indone</option>
+			                <option value="">In</option>
+			            </select>
+			          </div>
+			          <div class="one-half column row-input">
+			            <label for="cty">Kota/Kabupaten</label>
+			            <select id="cty" required>
+			                <option value="">Pilih kota/kabupaten</option>
+			                <option value="">Indonesia</option>
+			                <option value="">Indo</option>
+			                <option value="">Indone</option>
+			                <option value="">In</option>
+			            </select>
+			          </div>
+			        </div>
+			        <div class="row">
+			          <div class="one-half column row-input">
+			          	<label for="zcd">Kode pos</label>
+			            <input type="text" name="zipcode" id="zcd" placeholder="12560" required autocomplete="off" />
+			          </div>
+			          <div class="one-half column row-input">
+			          	<label for="tlp">No handphone</label>
+			            <input type="text" name="phone" id="tlp" placeholder="821 2345 6789" required autocomplete="off" style="padding-left: 40px;" />
+			            <label class="namdua">+62</label>
+			          </div>
+			        </div>
+			        <div class="row">
+			        	<input type="checkbox" name="wo-box" id="wobox"><span>Kirimkan saya tanpa box</span>
+			        </div>
+				</div>
+				<div class="forPayment">
+					<h6>Metode Pembelian</h6>
+					<input type="radio" name="subsType" id="onSusbcribe" checked="checked" onclick="subsPrice()">
+					<label for="onSusbcribe">
+						<div class="isSubscribe">
+							<section class="forIcon">
+								<img src="images/visa-icon.png">
+								<img src="images/master-icon.png">
+							</section>
+							<h5>Langganan</h5>
+							<p>Gunakan kartu kredit untuk berlangganan dan dapatkan diskon 10% di pengiriman pertama.</p>
+						</div>
+					</label>
+					<input type="radio" name="subsType" id="onPrepay" onclick="prepayPrice()">
+					<label for="onPrepay">
+						<div class="isPrepay">
+							<section class="forIcon" style="left: 33%;">
+								<img src="images/visa-icon.png">
+								<img src="images/master-icon.png">
+								<img src="images/bersama-icon.png">
+								<img src="images/prima-icon.png">
+								<img src="images/alto-icon.png">
+								<img src="images/gopay-icon.png" style="width: 45px;">
+							</section>
+							<h5>Prepay</h5>
+							<p>Bayar 6 pengiriman sekaligus di depan dan dapatkan diskon 15%.</p>
+							<span>6x pengiriman</span>
+						</div>
+					</label>
+					<input type="radio" name="subsType" id="onOnetime" onclick="onePrice()">
+					<label for="onOnetime">
+						<div class="isOnetime">
+							<section class="forIcon" style="left: 33%;">
+								<img src="images/visa-icon.png">
+								<img src="images/master-icon.png">
+								<img src="images/bersama-icon.png">
+								<img src="images/prima-icon.png">
+								<img src="images/alto-icon.png">
+								<img src="images/gopay-icon.png" style="width: 45px;">
+							</section>
+							<h5>Sekali Beli</h5>
+							<p>Mau coba dulu? Beli paket ini untuk kopi di pengiriman kami selanjutnya.</p>
+							<span>1x pengiriman</span>
+						</div>
+					</label>
+				</div>
+			</div>
+			<div class="right-side fixedsticky">
+				<div class="column forDetail">
+		          	<h5>Order Anda</h5>
+		          	<div class="row">
+			            <div class="one-half column y-order">
+			              	<span>Filter Package - 100g (2 x 50g) - Whole Beans</span>
+			            </div>
+			            <div class="one-half column y-order">
+			              	<span class="normal-price" style="float: right;">1 x Rp 79.000</span>
+			              	<span class="prepay-price" style="float: right;">6 x Rp 79.000</span>
+			            </div>
+		          	</div>
+		          	<div class="row forReferral" style="display: none;">
+			            <div class="nine columns">
+			              	<input type="text" name="referral">
+			            </div>
+			            <div class="three columns">
+			              	<button>Apply</button>
+			            </div>
+		          	</div>
+		          	<div class="divider"></div>
+		          	<div class="row">
+			            <div class="one-half column y-order">
+			              	<span>Total</span>
+			            </div>
+			            <div class="one-half column y-order">
+			              	<span class="normal-price" style="float: right;">Rp 79.000</span>
+			              	<span class="prepay-price" style="float: right;">Rp 474.000</span>
+			            </div>
+		          	</div>
+			        <div class="row">
+			            <div class="one-half column y-order">
+			              	<span>Ongkos kirim</span>
+			            </div>
+			            <div class="one-half column y-order">
+			              	<span style="float: right;">Free</span>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="one-half column y-order">
+			              	<span class="normal-price">Diskon</span>
+			              	<span class="prepay-price">Diskon = 15%</span>
+			            </div>
+			            <div class="one-half column y-order">
+			              	<span class="normal-price" style="float: right;">-</span>
+			              	<span class="prepay-price" style="float: right;">Rp 71.100</span>
+			            </div>
+			        </div>
+		          	<div class="divider"></div>
+			        <div class="row">
+			            <div class="one-half column y-order">
+			              	<span style="font-weight: bold;">Total</span>
+			            </div>
+			            <div class="one-half column y-order">
+			              	<span class="normal-price" style="float: right; font-size: 24px;font-weight: bold;">Rp 79.000</span>
+			              	<span class="prepay-price" style="float: right; font-size: 24px;font-weight: bold;">Rp 402.900</span>
+			            </div>
+			        </div>
+		        </div>
+			</div>
+			<div class="left-side">
+				<a class="subsChecked" href="recurring-payment.html" ><button class="btn-checkout">Bayar Sekarang</button></a>
+				<a class="preoneChecked" onclick="runSnap()"><button class="btn-checkout">Lanjut Bayar</button></a>
+				<div class="forBack">
+					<a href="index.html"><i class="fas fa-chevron-left" style="margin-right: 10px;"></i>Kembali ke pilih paket</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="https://cdn.rawgit.com/filamentgroup/fixed-sticky/master/fixedsticky.js"></script>
+<script>
+	// loaded fixed-sticky polyfill
+	// https://github.com/filamentgroup/fixed-sticky
+
+	$( '.right-side' ).fixedsticky();
+	$('.detailMBL').fixedsticky();
+
+	$('#forShow').click(function(){
+
+		$('.forDetail.isShow').slideToggle();
+		$('#forShow').toggleClass('active');
+	})
+
+	function prepayPrice(){
+		$('.normal-price').hide();
+		$('.prepay-price').show();
+		$('.preoneChecked').show();
+		$('.subsChecked').hide();
+	}
+	function subsPrice(){
+		$('.normal-price').show();
+		$('.prepay-price').hide();
+		$('.preoneChecked').hide();
+		$('.subsChecked').show();
+	}
+	function onePrice(){
+		$('.normal-price').show();
+		$('.prepay-price').hide();
+		$('.preoneChecked').show();
+		$('.subsChecked').hide();
+	}
+
+	function runSnap(){
+		window.location = 'snap-midtrans.html';
+	}
+</script>
+
+</body>
+</html>
