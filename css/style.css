@@ -1384,7 +1384,8 @@ li.referral button{
   margin-bottom: 20px;
 }
 .row-input input[type="text"],
-.row-input input[type="tel"]{
+.row-input input[type="tel"],
+.row-input input[type="password"]{
   width: 100%;
   border: 0;
   color: #4A4A4A;
@@ -1394,7 +1395,8 @@ li.referral button{
   padding-top: 0;
 }
 .row-input input[type="text"]:focus,
-.row-input input[type="tel"]:focus{
+.row-input input[type="tel"]:focus,
+.row-input input[type="password"]:focus{
   border-bottom: 1px solid #124F99;
 }
 .row-input input::placeholder{
